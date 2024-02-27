@@ -127,3 +127,81 @@ print(c)
 for i in range(1000, 10000):  # перебираем числа от 100 до 999
     if i % 10 == 7:         # используем остаток от деления на 10, для получения последней цифры
         print(i)
+#
+# num = int(input())
+# result = 0
+# for i in range(1, num + 1):
+#     result *= i
+# print(result)
+
+
+# n = int(input())
+# a = 0
+# while n != 0:
+#     s = n % 10
+#     if s % 2 == 0:
+#         a += s
+#     n //= 10
+# print(a)
+
+# n = input()
+# s = 0
+# while n > 10:
+#     if n % 2 == 1:
+#     s = n % 10
+#     n //= 10
+# print(s)
+
+
+# n = 4
+# count = 0
+# maximum = 0
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x % 2 != 0:
+#         count += 1
+#         if x > maximum:
+#             maximum = x
+#             #break
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+numb = int(input())
+r = ""
+counter3 = 0
+counter_last = 0
+counter_chetn = 0
+summa_bolshe_5 = 0
+proizv_bolshe_7 = 1
+zero_five_counter = 0
+l = numb % 10
+while numb != 0:
+    digit = numb % 10
+    if digit == 3:
+        counter3 += 1
+    if digit == l:
+        counter_last += 1
+    if digit % 2 == 0:
+        counter_chetn += 1
+    if digit > 5:
+        summa_bolshe_5 += digit
+    if digit > 7:
+        proizv_bolshe_7 *= digit
+    if proizv_bolshe_7 == 0:
+        proizv_bolshe_7 = 1
+    if digit == 0 or digit == 5:
+        zero_five_counter += 1
+
+    numb //= 10
+
+print(counter3)
+print(counter_last)
+print(counter_chetn)
+print(summa_bolshe_5)
+print(proizv_bolshe_7)
+print(zero_five_counter)
+
+
